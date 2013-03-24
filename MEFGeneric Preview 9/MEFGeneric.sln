@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{69CCA895-491D-4204-988C-A2DD37E086B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{90696BAA-5F6C-4E78-866F-0C0D5133AD25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentModel", "src\ComponentModel\ComponentModel.csproj", "{1BBA5101-D4F0-48B8-A5D6-7B23A099DCE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "Sample\ConsoleApplication1\ConsoleApplication1.csproj", "{F3AB08E1-3500-4776-8FF2-2F7A4A09F546}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentModel.Composition.Hosting.Extension", "src\ComponentModel.Composition.Hosting.Extension\ComponentModel.Composition.Hosting.Extension.csproj", "{0CC9E320-7E0A-4D77-ADBD-021FF590BD06}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs08.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Sample\\ConsoleApplication1\\ConsoleApplication1.csproj
+		SccProjectTopLevelParentUniqueName1 = MEFGeneric.sln
+		SccProjectName1 = Sample/ConsoleApplication1
+		SccLocalPath1 = Sample\\ConsoleApplication1
+		SccProjectUniqueName2 = src\\ComponentModel.Composition.Hosting.Extension\\ComponentModel.Composition.Hosting.Extension.csproj
+		SccProjectTopLevelParentUniqueName2 = MEFGeneric.sln
+		SccProjectName2 = src/ComponentModel.Composition.Hosting.Extension
+		SccLocalPath2 = src\\ComponentModel.Composition.Hosting.Extension
+		SccProjectUniqueName3 = src\\ComponentModel\\ComponentModel.csproj
+		SccProjectTopLevelParentUniqueName3 = MEFGeneric.sln
+		SccProjectName3 = src/ComponentModel
+		SccLocalPath3 = src\\ComponentModel
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BBA5101-D4F0-48B8-A5D6-7B23A099DCE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BBA5101-D4F0-48B8-A5D6-7B23A099DCE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BBA5101-D4F0-48B8-A5D6-7B23A099DCE3}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BBA5101-D4F0-48B8-A5D6-7B23A099DCE3}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{F3AB08E1-3500-4776-8FF2-2F7A4A09F546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3AB08E1-3500-4776-8FF2-2F7A4A09F546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3AB08E1-3500-4776-8FF2-2F7A4A09F546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3AB08E1-3500-4776-8FF2-2F7A4A09F546}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CC9E320-7E0A-4D77-ADBD-021FF590BD06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CC9E320-7E0A-4D77-ADBD-021FF590BD06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CC9E320-7E0A-4D77-ADBD-021FF590BD06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CC9E320-7E0A-4D77-ADBD-021FF590BD06}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1BBA5101-D4F0-48B8-A5D6-7B23A099DCE3} = {69CCA895-491D-4204-988C-A2DD37E086B2}
+		{0CC9E320-7E0A-4D77-ADBD-021FF590BD06} = {69CCA895-491D-4204-988C-A2DD37E086B2}
+		{F3AB08E1-3500-4776-8FF2-2F7A4A09F546} = {90696BAA-5F6C-4E78-866F-0C0D5133AD25}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		ThisSolutionNotes = 
+	EndGlobalSection
+	GlobalSection(SpecExplorer.ActivityCompletionStatus) = preSolution
+		SpecExplorer.ActivityCompletionStatus = 
+	EndGlobalSection
+EndGlobal
