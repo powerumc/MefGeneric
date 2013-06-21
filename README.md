@@ -8,7 +8,7 @@ Background
 
 MEF does not support open generic types. Therefore, open generic type classes cannot utilize MEF Composition. But, via MEFGeneric, changing and/or extending current MEF source code allows use of open generic types in MEF.
 
-Example
+###Example
 
 The following source code does not work in MEF, but using MEFGeneric, you can resolve and compose objects.
 
