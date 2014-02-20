@@ -2,6 +2,7 @@ Introduction
 ============
 
 MEFGeneric is a framework to support CLR Generic types in MEF (Managed Extensibility Framework).
+This is require Mef Framework If you need code on .NET Framework 3.0 or under.
 
 Background
 ==========
