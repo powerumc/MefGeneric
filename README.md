@@ -1,65 +1,48 @@
-What's Markdown ToC
-=====================
+Introduction
+============
 
-Markdown ToC is a composition library to render the **Markdown Flavored Syntax** and Create the **ToC(Table of Contents)** automatically.
-You're only markdown file, such as readme.md file.
+MEFGeneric is a framework to support CLR Generic types in MEF (Managed Extensibility Framework).
 
-# Method 1. Local Repository
+This is require Mef Framework if you need code on .NET Framework 3.0 or C# 2.0 under.
 
-1. You can download a zip file at [this link](https://github.com/powerumc/markdown-toc/archive/master.zip).
-2. And unzip a zipfile.
-3. You have to modify a README.md file what contents do you want.
-4. Upload your repository or git commit and push.
+Background
+==========
 
-# Method 2. GitHub gh-pages branch.
+MEF does not support open generic types. Therefore, open generic type classes cannot utilize MEF Composition. But, via MEFGeneric, changing and/or extending current MEF source code allows use of open generic types in MEF.
 
-Github gh-pages branch can host web page on github.com.
+###Example
 
-## 1. Add remote repository the Markdown-ToC
+The following source code does not work in MEF, but using MEFGeneric, you can resolve and compose objects.
 
-```
-$ git remote add markdown-toc git@github.com:powerumc/markdown-toc.git            # by ssh
+**Catalog and Composition**
+```c#
+var catalog = new AggregateCatalog(new AssemblyCatalog(Assembly.GetExecutingAssembly()));
+var genericCatalog = new GenericCatalog(catalog);
+var container = new CompositionContainer(genericCatalog);
 
-$ git remote add markdown-toc https://github.com/powerumc/markdown-toc.git        # by https
+Export Definition
+public interface IUMC<T>
+{
+  void Say();
+}
 
-```
+// Important : via only MEFGeneric, you can export definition of IUMC<> generic types.
+[Export(typeof(IUMC<>))]
+public class UMC<T> : IUMC<T>
+{
+	#region IUMC<T> Member
 
-## 2. Ready in your repository
+	public void Say()
+	{
+		Console.WriteLine(typeof(T).FullName);
+	}
 
-You should be  new branch is gh-pages without parent branch(--orphan).
-And remove all repository files.
-
-```
-$ git checkout --orphan gh-pages
-
-$ git rm -rf .
-
-$ git commit -am "remove all file for gh-pages"
-
-$ git pull markdown-toc master:gh-pages
-
-```
-
-## 3. Modify your README.md
-
-All right. Modify your contents in README.md, commit a README.md.
-
-```
-$ git commit -am "init commit."
+	#endregion
+}
 ```
 
-If you want to get it what is README.md from another branch.
-
+**Container Resolving / Injection**
+```c#
+container.GetExportedValueOrDefault<IUMC<int>>().Say();
+container.GetExportedValueOrDefault<IUMC<string>>().Say();
 ```
-$ git checkout master -- README.md
-
-$ git commit
-```
-
-
-## 4. Push these
-
-```
-$ git push origin gh-pages
-```
-
