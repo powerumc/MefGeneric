@@ -23,7 +23,7 @@ var catalog = new AggregateCatalog(new AssemblyCatalog(Assembly.GetExecutingAsse
 var genericCatalog = new GenericCatalog(catalog);
 var container = new CompositionContainer(genericCatalog);
 
-Export Definition
+// Export Definition
 public interface IUMC<T>
 {
   void Say();
